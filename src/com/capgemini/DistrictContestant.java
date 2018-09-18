@@ -4,7 +4,7 @@ package com.capgemini;
 public class DistrictContestant extends Contestant {
 
     DistrictContestant() {
-        super(true, 100, +25, +25, true);
+        super(true, 100, +25, +25, true, false);
     }
 
 }

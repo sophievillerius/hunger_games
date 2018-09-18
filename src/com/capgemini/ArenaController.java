@@ -9,6 +9,12 @@ public class ArenaController {
         "Defense Level of " + contestant1.getDefenseLevel() + " and an Attack Level of " +
                 contestant1.getAttackLevel() + ".");
 
+        DistrictList districtList1 = new DistrictList();
+        districtList1.makeDistrictContestants();
+
+        CareerList careerList1 = new CareerList();
+        careerList1.makeCareerContestants();
+
     }
 
 }

@@ -8,8 +8,9 @@ public class Contestant {
     private int defenseLevel;
     private int attackLevel;
     private boolean isWoman;
+    private boolean specialItem;
 
-    public Contestant(boolean alive, int healthLevel, int defenseLevel, int attackLevel, boolean isWoman) {
+    public Contestant(boolean alive, int healthLevel, int defenseLevel, int attackLevel, boolean isWoman, boolean specialItem) {
         this.alive = alive;
         this.healthLevel = healthLevel;
         this.defenseLevel = defenseLevel;
@@ -65,4 +66,11 @@ public class Contestant {
         }
     }
 
+    public boolean isSpecialItem() {
+        return specialItem;
+    }
+
+    public void setSpecialItem(boolean specialItem) {
+        this.specialItem = specialItem;
+    }
 }
