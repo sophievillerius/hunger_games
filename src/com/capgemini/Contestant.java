@@ -3,6 +3,7 @@ package com.capgemini;
 // Dit is de basis class voor contestants
 public class Contestant {
 
+    // deze variabelen beschrijven de eigenschappen van de contestant: levend ja/nee, health level (0-100), defense level (random 0-100), attack level (0-100), geslacht (vrouw ja/nee), heeft speciaal voorwerp ja/nee
     private boolean alive;
     private int healthLevel;
     private int defenseLevel;
@@ -16,6 +17,7 @@ public class Contestant {
         this.defenseLevel = defenseLevel;
         this.attackLevel = attackLevel;
         this.isWoman = isWoman;
+        this.specialItem = specialItem;
     }
 
     public boolean isAlive() {
@@ -72,5 +74,21 @@ public class Contestant {
 
     public void setSpecialItem(boolean specialItem) {
         this.specialItem = specialItem;
+    }
+
+    public String printSpecialItem() {
+        if (isSpecialItem()) {
+            return "has a special item";
+        } else {
+            return "has no special item";
+        }
+    }
+
+    public String printAlive() {
+        if (isAlive()) {
+            return "alive";
+        } else {
+            return "dead";
+        }
     }
 }
