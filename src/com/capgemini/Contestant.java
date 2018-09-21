@@ -4,19 +4,23 @@ package com.capgemini;
 public class Contestant {
 
     // deze variabelen beschrijven de eigenschappen van de contestant: levend ja/nee, health level (0-100), defense level (random 0-100), attack level (0-100), geslacht (vrouw ja/nee), heeft speciaal voorwerp ja/nee
-    private boolean alive;
+    private boolean alive = true;
     private int healthLevel;
     private int defenseLevel;
     private int attackLevel;
     private boolean isWoman;
+    //maybe put it in a class? can increment defense, attack or health (random?)
     private boolean specialItem;
+    private String contestantType;
 
-    public Contestant(boolean alive, int healthLevel, int defenseLevel, int attackLevel, boolean isWoman, boolean specialItem) {
-        this.alive = alive;
+    public Contestant(){
+
+    }
+
+    public Contestant(int healthLevel, int defenseLevel, int attackLevel, boolean specialItem) {
         this.healthLevel = healthLevel;
         this.defenseLevel = defenseLevel;
         this.attackLevel = attackLevel;
-        this.isWoman = isWoman;
         this.specialItem = specialItem;
     }
 
@@ -90,5 +94,13 @@ public class Contestant {
         } else {
             return "dead";
         }
+    }
+
+    public String getContestantType() {
+        return contestantType;
+    }
+
+    public void setContestantType(String contestantType) {
+        this.contestantType = contestantType;
     }
 }
