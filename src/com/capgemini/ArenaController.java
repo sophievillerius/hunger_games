@@ -22,7 +22,11 @@ public class ArenaController {
         contestantList1.makeContestants();
 
         //battle method for 1 day until 1 survivor!!
+        int dayNumber = 1;
         while (contestantList1.getNumberOfContestantsAlive() > 1) {
+
+
+            System.out.println("\nDay " + dayNumber);
 
             contestantList1.contestantFight();
             contestantList1.restoreHealthRemainingContestants();
@@ -30,6 +34,7 @@ public class ArenaController {
             if (contestantList1.getNumberOfContestantsAlive() > 1) {
                 System.out.println("\nThere are now " + contestantList1.getNumberOfContestantsAlive() + " contestants alive.");
             }
+            dayNumber+= 1;
         }
 
         if (contestantList1.getNumberOfContestantsAlive() == 1) {

@@ -79,8 +79,6 @@ public class ContestantList extends ArrayList<Contestant> {
     //method to make contestants fights
     public void contestantFight() {
 
-        System.out.println("\nA new day");
-
         int chanceOfFighting = ((int)(Math.random() * ((100 - 1) + 1)) + 1);
         //these numbers should not be the same
         int fighter1 = ((int)(Math.random() * ((23) + 1)));
