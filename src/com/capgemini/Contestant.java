@@ -40,6 +40,14 @@ public class Contestant {
         this.healthLevel = healthLevel;
     }
 
+    public void decreaseHealth (int decrease) {
+        this.healthLevel = this.healthLevel - decrease;
+    }
+
+    public void restoreHealth () {
+        this.healthLevel = 100;
+    }
+
     public int getDefenseLevel() {
         return defenseLevel;
     }

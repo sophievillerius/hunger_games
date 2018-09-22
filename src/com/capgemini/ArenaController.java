@@ -22,7 +22,19 @@ public class ArenaController {
         contestantList1.makeContestants();
 
         //battle method for 1 day until 1 survivor!!
-        contestantList1.contestantFight();
+        while (contestantList1.getNumberOfContestantsAlive() > 1) {
+
+            contestantList1.contestantFight();
+            contestantList1.restoreHealthRemainingContestants();
+
+            if (contestantList1.getNumberOfContestantsAlive() > 1) {
+                System.out.println("\nThere are now " + contestantList1.getNumberOfContestantsAlive() + " contestants alive.");
+            }
+        }
+
+        if (contestantList1.getNumberOfContestantsAlive() == 1) {
+            System.out.println("\nThere is now only one contestant left. The winner is contestant " + contestantList1.getContestantAlive() + ". This contestant is now killed by President Snow... :(");
+        }
 
     }
 
